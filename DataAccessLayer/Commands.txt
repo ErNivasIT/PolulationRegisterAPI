@@ -1,1 +1,0 @@
-﻿Scaffold-DbContext  -Connection name=MyDB -Provider Microsoft.EntityFrameworkCore.SqlServer

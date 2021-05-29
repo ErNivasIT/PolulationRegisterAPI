@@ -6,3 +6,4 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\ob
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Debug\netcoreapp3.1\BusinessRepository.csproj.CoreCompileInputs.cache
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Debug\netcoreapp3.1\BusinessRepository.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Debug\netcoreapp3.1\BusinessRepository.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Debug\netcoreapp3.1\BusinessRepository.csprojAssemblyReference.cache

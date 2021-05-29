@@ -1,0 +1,8 @@
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb

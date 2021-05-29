@@ -1,0 +1,8 @@
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.deps.json
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfoInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.AssemblyInfo.cs
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb

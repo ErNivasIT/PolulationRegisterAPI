@@ -19,7 +19,7 @@ namespace PopulationManagementAPI.Controllers
         private readonly IPersonBusinessLayer personBusinessLayer;
         private readonly IMapper mapper;
 
-        public PersonsController(IPersonBusinessLayer personBusinessLayer,IMapper mapper)
+        public PersonsController(IPersonBusinessLayer personBusinessLayer, IMapper mapper)
         {
             this.personBusinessLayer = personBusinessLayer;
             this.mapper = mapper;
@@ -42,9 +42,20 @@ namespace PopulationManagementAPI.Controllers
         }
 
         // POST api/<PersonsController>
+
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] PersonViewModel person)
         {
+            //
+            var result = personBusinessLayer.Save(new PersonModel()
+            {
+                FirstName = person.FirstName,
+                MiddleName = person.MiddleName,
+                LastName = person.LastName,
+                Dob = person.Dob,
+                CategoryId = person.CategoryId,
+                GenderId = person.GenderId
+            });
         }
 
         // PUT api/<PersonsController>/5

@@ -14,5 +14,6 @@ namespace PopulationManagementAPI.AutoMapping
         {
             CreateMap<PersonModel, PersonViewModel>();
         }
+        
     }
 }

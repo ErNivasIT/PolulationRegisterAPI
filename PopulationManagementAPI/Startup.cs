@@ -1,4 +1,6 @@
+using AutoMapper;
 using BusinessLayer;
+using BusinessModels;
 using BusinessRepository;
 using DataAccessLayer;
 using Microsoft.AspNetCore.Builder;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PopulationManagementAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +38,8 @@ namespace PopulationManagementAPI
                 options.UseSqlServer(Configuration.GetConnectionString("PopulationConnectionString")));
             services.AddScoped<IPersonBusinessLayer, PersonBusinessLayer>();
             services.AddScoped<IPersonBusinessRepository, PersonBusinessRepository>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

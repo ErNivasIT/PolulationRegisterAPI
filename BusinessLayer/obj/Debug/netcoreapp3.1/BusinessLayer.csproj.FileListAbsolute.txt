@@ -7,3 +7,11 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Deb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csprojAssemblyReference.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessModels.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessRepository.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessModels.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\BusinessRepository.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll.config
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete

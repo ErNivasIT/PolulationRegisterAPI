@@ -64,3 +64,11 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementA
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\DataAccessLayer.dll.config
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessModels.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessModels.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessRepository.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\BusinessRepository.pdb

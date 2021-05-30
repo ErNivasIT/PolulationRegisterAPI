@@ -1483,16 +1483,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "BusinessModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/BusinessModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BusinessModels.dll": {}
-        }
-      },
       "BusinessRepository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5690,11 +5680,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "BusinessModels/1.0.0": {
-      "type": "project",
-      "path": "../BusinessModels/BusinessModels.csproj",
-      "msbuildProject": "../BusinessModels/BusinessModels.csproj"
-    },
     "BusinessRepository/1.0.0": {
       "type": "project",
       "path": "../BusinessRepository/BusinessRepository.csproj",
@@ -5708,7 +5693,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BusinessModels >= 1.0.0",
       "BusinessRepository >= 1.0.0"
     ]
   },
@@ -5743,9 +5727,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\ShreeNiwas\\PolulationRegister\\API\\PolulationRegisterAPI\\BusinessModels\\BusinessModels.csproj": {
-              "projectPath": "D:\\ShreeNiwas\\PolulationRegister\\API\\PolulationRegisterAPI\\BusinessModels\\BusinessModels.csproj"
-            },
             "D:\\ShreeNiwas\\PolulationRegister\\API\\PolulationRegisterAPI\\BusinessRepository\\BusinessRepository.csproj": {
               "projectPath": "D:\\ShreeNiwas\\PolulationRegister\\API\\PolulationRegisterAPI\\BusinessRepository\\BusinessRepository.csproj"
             }

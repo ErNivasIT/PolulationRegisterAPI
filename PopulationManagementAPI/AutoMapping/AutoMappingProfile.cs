@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BusinessModels;
+using DataAccessLayer;
 using PopulationManagementAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace PopulationManagementAPI.AutoMapping
     {
         public AutoMappingProfile()
         {
-            CreateMap<PersonModel, PersonViewModel>().ReverseMap();
+            CreateMap<Person, PersonViewModel>().ReverseMap();
         }
         
     }

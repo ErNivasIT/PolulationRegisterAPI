@@ -1,0 +1,9 @@
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\bin\Release\netcoreapp3.1\BusinessModels.deps.json
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\bin\Release\netcoreapp3.1\BusinessModels.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\bin\Release\netcoreapp3.1\BusinessModels.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.csprojAssemblyReference.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.AssemblyInfoInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.AssemblyInfo.cs
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.csproj.CoreCompileInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessModels\obj\Release\netcoreapp3.1\BusinessModels.pdb

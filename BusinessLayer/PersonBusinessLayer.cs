@@ -1,5 +1,4 @@
-﻿using BusinessModels;
-using BusinessRepository;
+﻿using BusinessRepository;
 using DataAccessLayer;
 using System;
 using System.Collections.Generic;
@@ -17,10 +16,10 @@ namespace BusinessLayer
         {
             this.personBusinessRepository = personBusinessRepository;
         }
-        public IEnumerable<PersonModel> GetPersons()
+        public IEnumerable<Person> GetPersons()
         {
             var res = personBusinessRepository.GetPersons();
-            return res.Select(p => new PersonModel()
+            return res.Select(p => new Person()
             {
                 FirstName = p.FirstName,
                 MiddleName = p.MiddleName,
@@ -34,7 +33,7 @@ namespace BusinessLayer
             }).ToList();
         }
 
-        public async Task<KeyValuePair<string, string>> Save(PersonModel p)
+        public async Task<KeyValuePair<string, string>> Save(Person p)
         {
             KeyValuePair<string, string> result = await personBusinessRepository.Save(new Person()
             {

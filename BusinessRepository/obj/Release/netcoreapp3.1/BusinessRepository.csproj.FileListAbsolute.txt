@@ -1,0 +1,13 @@
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\BusinessRepository.deps.json
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\BusinessRepository.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\BusinessRepository.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\DataAccessLayer.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\DataAccessLayer.pdb
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\bin\Release\netcoreapp3.1\DataAccessLayer.dll.config
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.csprojAssemblyReference.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.AssemblyInfoInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.AssemblyInfo.cs
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.csproj.CoreCompileInputs.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.csproj.CopyComplete
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\BusinessRepository\obj\Release\netcoreapp3.1\BusinessRepository.pdb

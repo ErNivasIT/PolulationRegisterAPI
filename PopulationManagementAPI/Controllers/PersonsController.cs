@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLayer;
-using BusinessModels;
+using DataAccessLayer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PopulationManagementAPI.Models;
@@ -27,11 +27,15 @@ namespace PopulationManagementAPI.Controllers
             this.personBusinessLayer = personBusinessLayer;
             this.mapper = mapper;
         }
+        /// <summary>
+        /// Get All Registered Persons in Census Survey
+        /// </summary>
+        /// <returns></returns>
         // GET: api/<PersonsController>
         [HttpGet]
         public IEnumerable<PersonViewModel> Get()
         {
-            IEnumerable<PersonModel> lstModels = new List<PersonModel>();
+            IEnumerable<Person> lstModels = new List<Person>();
             lstModels = personBusinessLayer.GetPersons();
             var lst = mapper.Map<IEnumerable<PersonViewModel>>(lstModels);
             return lst;
@@ -46,7 +50,7 @@ namespace PopulationManagementAPI.Controllers
             KeyValuePair<string, string> result = new KeyValuePair<string, string>();
             try
             {
-                PersonModel objModel = mapper.Map<PersonModel>(person);
+                Person objModel = mapper.Map<Person>(person);
                 
                 objModel.AddedByIp=Request.HttpContext.Connection.RemoteIpAddress.ToString();
                 objModel.AddedOn= DateTime.Now;

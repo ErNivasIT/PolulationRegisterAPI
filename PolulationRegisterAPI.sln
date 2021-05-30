@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationManagementAPI", "PopulationManagementAPI\PopulationManagementAPI.csproj", "{9FE72E57-511C-4F1F-9C9E-025A45966F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopulationManagementAPI", "PopulationManagementAPI\PopulationManagementAPI.csproj", "{9FE72E57-511C-4F1F-9C9E-025A45966F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{9A0B6E60-6EB0-4C55-8E26-E77555F8DDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{9A0B6E60-6EB0-4C55-8E26-E77555F8DDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F59E81D4-869F-4226-8720-B93E39C82639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F59E81D4-869F-4226-8720-B93E39C82639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModels", "BusinessModels\BusinessModels.csproj", "{699725AE-3D40-4C67-BB40-EC65E390FC5B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessRepository", "BusinessRepository\BusinessRepository.csproj", "{BA1CBE5B-B341-4F13-9ABC-DA7EEA5CFAAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessRepository", "BusinessRepository\BusinessRepository.csproj", "{BA1CBE5B-B341-4F13-9ABC-DA7EEA5CFAAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{F59E81D4-869F-4226-8720-B93E39C82639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F59E81D4-869F-4226-8720-B93E39C82639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F59E81D4-869F-4226-8720-B93E39C82639}.Release|Any CPU.Build.0 = Release|Any CPU
-		{699725AE-3D40-4C67-BB40-EC65E390FC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{699725AE-3D40-4C67-BB40-EC65E390FC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{699725AE-3D40-4C67-BB40-EC65E390FC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{699725AE-3D40-4C67-BB40-EC65E390FC5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA1CBE5B-B341-4F13-9ABC-DA7EEA5CFAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA1CBE5B-B341-4F13-9ABC-DA7EEA5CFAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA1CBE5B-B341-4F13-9ABC-DA7EEA5CFAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU

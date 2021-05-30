@@ -1,4 +1,4 @@
-﻿using BusinessModels;
+﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +8,7 @@ namespace BusinessLayer
 {
     public interface IPersonBusinessLayer
     {
-        IEnumerable<PersonModel> GetPersons();
-        Task<KeyValuePair<string, string>> Save(PersonModel personModel);
+        IEnumerable<Person> GetPersons();
+        Task<KeyValuePair<string, string>> Save(Person personModel);
     }
 }

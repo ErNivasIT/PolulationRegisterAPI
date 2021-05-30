@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using PopulationManagementAPI.Models;
+using PopulationRegisterWeb.APIDepedency;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,49 +16,22 @@ namespace PopulationRegisterWeb.Controllers
         public IActionResult Genders()
         {
             IEnumerable<Genders> lstGenders = new List<Genders>();
-
-            HttpWebRequest oRequest = HttpWebRequest.Create("https://localhost/populationregister/api/masters/Genders") as HttpWebRequest;
-            oRequest.Method = "GET";
-            oRequest.ContentType = "application/json";
-            oRequest.KeepAlive = false;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            using (var oWebResponse = oRequest.GetResponse())
-            {
-                using (var oStream = oWebResponse.GetResponseStream())
-                {
-                    using (var oStreamReader = new StreamReader(oStream))
-                    {
-                        var result = oStreamReader.ReadToEnd();
-                        lstGenders = JsonConvert.DeserializeObject<IEnumerable<Genders>>(result);
-                    }
-                }
-            }
-
+            ConnectionToAPI objConnectionToAPI = new ConnectionToAPI("masters/Genders", "GET");
+            objConnectionToAPI.IsHttpsEnable = true;
+            objConnectionToAPI.ContentType = "application/json";
+            objConnectionToAPI.KeepAlive = false;
+            lstGenders = objConnectionToAPI.DownloadAs<List<Genders>>();
             return Json(lstGenders);
         }
         public IActionResult Categories()
         {
             IEnumerable<Categories> lstCategories = new List<Categories>();
 
-            HttpWebRequest oRequest = HttpWebRequest.Create("https://localhost/populationregister/api/masters/Categories") as HttpWebRequest;
-            oRequest.Method = "GET";
-            oRequest.ContentType = "application/json";
-            oRequest.KeepAlive = false;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            using (var oWebResponse = oRequest.GetResponse())
-            {
-                using (var oStream = oWebResponse.GetResponseStream())
-                {
-                    using (var oStreamReader = new StreamReader(oStream))
-                    {
-                        var result = oStreamReader.ReadToEnd();
-                        lstCategories = JsonConvert.DeserializeObject<IEnumerable<Categories>>(result);
-                    }
-                }
-            }
-
+            ConnectionToAPI objConnectionToAPI = new ConnectionToAPI("masters/Categories", "GET");
+            objConnectionToAPI.IsHttpsEnable = true;
+            objConnectionToAPI.ContentType = "application/json";
+            objConnectionToAPI.KeepAlive = false;
+            lstCategories = objConnectionToAPI.DownloadAs<List<Categories>>();
             return Json(lstCategories);
         }
     }

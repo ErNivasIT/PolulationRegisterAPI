@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using PopulationRegisterWeb.APIDepedency;
 using PopulationRegisterWeb.Models;
 using System;
 using System.Collections.Generic;
@@ -19,31 +20,13 @@ namespace PopulationRegisterWeb.Controllers
         {
             IEnumerable<PersonsViewModel> lstPersons = new List<PersonsViewModel>();
 
-            HttpWebRequest oRequest = HttpWebRequest.Create("https://localhost/populationregister/api/Persons") as HttpWebRequest;
-            oRequest.Method = "GET";
-            oRequest.ContentType = "application/json";
-            oRequest.KeepAlive = false;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            using (var oWebResponse = oRequest.GetResponse())
-            {
-                using (var oStream = oWebResponse.GetResponseStream())
-                {
-                    using (var oStreamReader = new StreamReader(oStream))
-                    {
-                        var result = oStreamReader.ReadToEnd();
-                        lstPersons = JsonConvert.DeserializeObject<IEnumerable<PersonsViewModel>>(result);
-                    }
-                }
-            }
+            ConnectionToAPI objConnectionToAPI = new ConnectionToAPI("Persons", "GET");
+            objConnectionToAPI.IsHttpsEnable = true;
+            objConnectionToAPI.ContentType = "application/json";
+            objConnectionToAPI.KeepAlive = false;
+            lstPersons = objConnectionToAPI.DownloadAs<List<PersonsViewModel>>();
 
             return View(lstPersons);
-        }
-
-        // GET: PopulationRegisterController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
         }
 
         // GET: PopulationRegisterController/Create
@@ -60,77 +43,25 @@ namespace PopulationRegisterWeb.Controllers
         {
 
             obj.AddedBy = 1;
-            obj.AddedByIp = "123";
+            obj.AddedByIp =ControllerContext.HttpContext.Connection.RemoteIpAddress.ToString();
             obj.AddedOn = DateTime.Now;
 
-            HttpWebRequest oRequest = HttpWebRequest.Create("https://localhost/populationregister/api/persons/save") as HttpWebRequest;
-            oRequest.Method = "POST";
-            oRequest.ContentType = "application/json";
-            oRequest.KeepAlive = false;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ConnectionToAPI objConnectionToAPI = new ConnectionToAPI("Persons/Save", "POST");
+            objConnectionToAPI.IsHttpsEnable = true;
+            objConnectionToAPI.ContentType = "application/json";
+            objConnectionToAPI.KeepAlive = false;
 
-            var jsonData = JsonConvert.SerializeObject(obj);
-            var oData = Encoding.UTF8.GetBytes(jsonData);
-            
-            using (Stream oReadRequest = await oRequest.GetRequestStreamAsync())
-            {
-                oReadRequest.Write(oData, 0, oData.Length);
-            }
+            await objConnectionToAPI.PassDataToSendAsync(obj);
 
-            using (HttpWebResponse oWebResponse =await oRequest.GetResponseAsync() as HttpWebResponse)
-            {
-                if (oWebResponse.StatusCode == HttpStatusCode.OK)
-                {
-                    return  RedirectToAction(nameof(Index));
-                }
-                else
-                {
-                    return View(obj);
-                }
-            }
+            KeyValuePair<string, string> response = await objConnectionToAPI.UploadDataAndGetResponseAsync();
 
-
-        }
-
-        // GET: PopulationRegisterController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: PopulationRegisterController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
+            if (response.Key == "OK")
             {
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
-            }
-        }
-
-        // GET: PopulationRegisterController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PopulationRegisterController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
+                return View(obj);
             }
         }
     }

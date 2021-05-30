@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
 using BusinessLayer;
 using BusinessModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PopulationManagementAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -44,18 +47,24 @@ namespace PopulationManagementAPI.Controllers
         // POST api/<PersonsController>
 
         [HttpPost]
-        public void Post([FromBody] PersonViewModel person)
+        public async Task<IActionResult> Post([FromBody] PersonViewModel person)
         {
             //
-            var result = personBusinessLayer.Save(new PersonModel()
+            var result = await personBusinessLayer.Save(new PersonModel()
             {
                 FirstName = person.FirstName,
                 MiddleName = person.MiddleName,
                 LastName = person.LastName,
                 Dob = person.Dob,
                 CategoryId = person.CategoryId,
-                GenderId = person.GenderId
-            });
+                GenderId = person.GenderId,
+                MotherName = person.MotherName,
+                AddedBy = 1,
+                AddedByIp= Request.HttpContext.Connection.RemoteIpAddress.ToString(),
+                FatherName =person.FatherName,
+                AddedOn=DateTime.Now
+            }); ;
+            return Ok(result);
         }
 
         // PUT api/<PersonsController>/5

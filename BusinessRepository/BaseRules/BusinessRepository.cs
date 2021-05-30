@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace BusinessRepository.BaseRules
 {
-    public class BusinessRepository<T> : BaseEntity, IBusinessRepository<T> where T : BaseEntity
+    public class BusinessRepository<T> : IBusinessRepository<T> where T : class
     {
-        private readonly MPKisaanContext mPKisaanContext;
+        private readonly DbContext _dbContext;
         private DbSet<T> entities;
 
-        public BusinessRepository(MPKisaanContext mPKisaanContext)
+        public BusinessRepository(DbContext dbContext)
         {
-            this.mPKisaanContext = mPKisaanContext;
-            entities = mPKisaanContext.Set<T>();
+            this._dbContext = dbContext;
+            entities = _dbContext.Set<T>();
         }
         public async Task<IEnumerable<T>> GetAll()
         {
@@ -25,25 +25,48 @@ namespace BusinessRepository.BaseRules
 
         public async Task<T> GetByID(long ID)
         {
-            return await entities.SingleOrDefaultAsync(s => s.ID == ID);
+            return await entities.SingleOrDefaultAsync();
         }
 
         public async Task<KeyValuePair<string, string>> Remove(long ID)
         {
-            T obj = await entities.SingleOrDefaultAsync(p => p.ID == ID);
+            T obj = await entities.SingleOrDefaultAsync();
             entities.Remove(obj);
             return new KeyValuePair<string, string>();
         }
 
         public async Task<KeyValuePair<string, string>> Save(T obj)
         {
-            await entities.AddAsync(obj);
-            return new KeyValuePair<string, string>("SUCCESS",$"{obj.GetType().Name} has been Saved Successfully !!!");
+            try
+            {
+                entities.Add(obj);
+                _dbContext.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                return new KeyValuePair<string, string>("FAIL",ex.InnerException.Message);
+            }
+
+            return new KeyValuePair<string, string>("SUCCESS", $"{obj.GetType().Name} has been Saved Successfully !!!");
         }
 
         public KeyValuePair<string, string> Update(T obj, long ID)
         {
             throw new NotImplementedException();
+        }
+        public async Task SaveChanges()
+        {
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
     }
 }

@@ -1,13 +1,14 @@
-﻿using BusinessLayer.BaseRules;
-using BusinessModels;
+﻿using BusinessModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public interface IPersonBusinessLayer: IBusinessLayer<PersonModel>
+    public interface IPersonBusinessLayer
     {
         IEnumerable<PersonModel> GetPersons();
+        Task<KeyValuePair<string, string>> Save(PersonModel personModel);
     }
 }

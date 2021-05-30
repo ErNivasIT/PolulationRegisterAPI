@@ -34,12 +34,12 @@ namespace PopulationManagementAPI
         {
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
-            services.AddDbContext<MPKisaanContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("PopulationConnectionString")));
+        
             services.AddScoped<IPersonBusinessLayer, PersonBusinessLayer>();
             services.AddScoped<IPersonBusinessRepository, PersonBusinessRepository>();
 
-
+            services.AddDbContext<MPKisaanContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("PopulationConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

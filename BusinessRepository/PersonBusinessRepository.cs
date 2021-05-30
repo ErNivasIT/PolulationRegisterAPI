@@ -1,4 +1,5 @@
-﻿using DataAccessLayer;
+﻿using BusinessRepository.BaseRules;
+using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,10 @@ using System.Text;
 
 namespace BusinessRepository
 {
-    public class PersonBusinessRepository : IPersonBusinessRepository
+    public class PersonBusinessRepository : BusinessRepository<Person>, IPersonBusinessRepository
     {
         private MPKisaanContext mPKisaanContext;
-        public PersonBusinessRepository(MPKisaanContext mPKisaanContext)
+        public PersonBusinessRepository(MPKisaanContext mPKisaanContext):base(mPKisaanContext)
         {
             this.mPKisaanContext = mPKisaanContext;
         }
@@ -17,5 +18,7 @@ namespace BusinessRepository
         {
            return mPKisaanContext.Persons.ToList();
         }
+
+      
     }
 }

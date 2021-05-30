@@ -1,14 +1,15 @@
-﻿using BusinessLayer.BaseRules;
-using BusinessModels;
+﻿using BusinessModels;
 using BusinessRepository;
+using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class PersonBusinessLayer : BusinessLayer<PersonModel>, IPersonBusinessLayer
+    public class PersonBusinessLayer : IPersonBusinessLayer
     {
         private readonly IPersonBusinessRepository personBusinessRepository;
 
@@ -31,6 +32,26 @@ namespace BusinessLayer
                 GenderId = p.GenderId,
                 Id = p.Id
             }).ToList();
+        }
+
+        public async Task<KeyValuePair<string, string>> Save(PersonModel p)
+        {
+            KeyValuePair<string, string> result = await personBusinessRepository.Save(new Person()
+            {
+                FirstName = p.FirstName,
+                MiddleName = p.MiddleName,
+                LastName = p.LastName,
+                FatherName = p.FatherName,
+                MotherName = p.MotherName,
+                Dob = p.Dob,
+                CategoryId = p.CategoryId,
+                GenderId = p.GenderId,
+                Id = p.Id,
+                AddedOn = p.AddedOn,
+                AddedByIp = p.AddedByIp,
+                AddedBy = p.AddedBy
+            });
+            return result;
         }
     }
 }

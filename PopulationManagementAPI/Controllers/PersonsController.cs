@@ -35,8 +35,14 @@ namespace PopulationManagementAPI.Controllers
         [HttpGet]
         public IEnumerable<PersonViewModel> Get()
         {
-            IEnumerable<Person> lstModels = new List<Person>();
-            lstModels = personBusinessLayer.GetPersons();
+            IEnumerable<Person> lstModels = new List<Person>()
+            {
+            new Person(){  FirstName="Shreeniwas" ,MiddleName=string.Empty,LastName="Kushwah", Dob=Convert.ToDateTime("02/06/1986"),CategoryId=1,GenderId=1},
+            new Person(){  FirstName="Rahul" ,MiddleName=string.Empty,LastName="Kushwah", Dob=Convert.ToDateTime("02/06/1986"),CategoryId=1,GenderId=1},
+            new Person(){  FirstName="Vijay" ,MiddleName=string.Empty,LastName="Kushwah", Dob=Convert.ToDateTime("02/06/1986"),CategoryId=1,GenderId=1},
+            };
+
+            // lstModels = personBusinessLayer.GetPersons();
             var lst = mapper.Map<IEnumerable<PersonViewModel>>(lstModels);
             return lst;
         }
@@ -51,20 +57,20 @@ namespace PopulationManagementAPI.Controllers
             try
             {
                 Person objModel = mapper.Map<Person>(person);
-                
-                objModel.AddedByIp=Request.HttpContext.Connection.RemoteIpAddress.ToString();
-                objModel.AddedOn= DateTime.Now;
+
+                objModel.AddedByIp = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+                objModel.AddedOn = DateTime.Now;
                 objModel.AddedBy = 1;
 
-                result = await personBusinessLayer.Save(objModel); 
+                result = await personBusinessLayer.Save(objModel);
             }
             catch (Exception ex)
             {
-                result = new KeyValuePair<string, string>("FAIL",ex.Message);
+                result = new KeyValuePair<string, string>("FAIL", ex.Message);
             }
-            
+
             return Ok(result);
         }
- 
+
     }
 }

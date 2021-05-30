@@ -33,7 +33,6 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "BusinessLayer": "1.0.0",
-          "BusinessModels": "1.0.0",
           "DataAccessLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
@@ -1510,7 +1509,6 @@
       },
       "BusinessLayer/1.0.0": {
         "dependencies": {
-          "BusinessModels": "1.0.0",
           "BusinessRepository": "1.0.0"
         },
         "runtime": {
@@ -1518,14 +1516,6 @@
         },
         "compile": {
           "BusinessLayer.dll": {}
-        }
-      },
-      "BusinessModels/1.0.0": {
-        "runtime": {
-          "BusinessModels.dll": {}
-        },
-        "compile": {
-          "BusinessModels.dll": {}
         }
       },
       "BusinessRepository/1.0.0": {
@@ -3929,11 +3919,6 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "BusinessLayer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BusinessModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

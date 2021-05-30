@@ -58,11 +58,9 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementA
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessLayer.dll
-D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessModels.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessRepository.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\DataAccessLayer.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessLayer.pdb
-D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessModels.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\DataAccessLayer.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\DataAccessLayer.dll.config
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Release\netcoreapp3.1\BusinessRepository.pdb

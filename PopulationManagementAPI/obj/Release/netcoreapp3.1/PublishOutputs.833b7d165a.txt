@@ -54,11 +54,9 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementA
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessLayer.dll
-D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessModels.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessRepository.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\DataAccessLayer.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessLayer.pdb
-D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessModels.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\DataAccessLayer.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\DataAccessLayer.dll.config
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Release\netcoreapp3.1\PubTmp\Out\BusinessRepository.pdb

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PersonsViewModel>
+<div class="card">
+    <div class="card-header alert-success">View Person List Registered in Census Survey 2023</div>
+    <div class="card-body">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Category</th>
+                        <th>Gender</th>
+                        <th>Father Name</th>
+                        <th>Mother Name</th>
+                        <th>Added By</th>
+                        <th>Added By IP</th>
+                        <th>Added On</th>
+                    </tr>
+                </thead> @{int Sno = 0; }
+                @foreach (var objPerson in Model)
+                {
+
+                    <tr>
+                        <td>@(++Sno)</td>
+                        <td>@objPerson.FirstName</td>
+                        <td>@objPerson.MiddleName</td>
+                        <td>@objPerson.LastName</td>
+                        <td>@objPerson.Dob</td>
+                        <td>@objPerson.CategoryId</td>
+                        <td>@objPerson.GenderId</td>
+                        <td>@objPerson.FatherName</td>
+                        <td>@objPerson.MotherName</td>
+                        <td>@objPerson.AddedBy</td>
+                        <td>@objPerson.AddedByIp</td>
+                        <td>@objPerson.AddedOn</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="card-footer alert-success">
+        <a href="#" class="btn btn-success">Register More Person</a>
+    </div>
+</div>

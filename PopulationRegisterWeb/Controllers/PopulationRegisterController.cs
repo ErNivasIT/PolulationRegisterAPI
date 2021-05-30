@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace PopulationRegisterWeb.Controllers
@@ -26,16 +27,17 @@ namespace PopulationRegisterWeb.Controllers
 
             using (var oWebResponse = oRequest.GetResponse())
             {
-                using (var oStream=oWebResponse.GetResponseStream())
+                using (var oStream = oWebResponse.GetResponseStream())
                 {
                     using (var oStreamReader = new StreamReader(oStream))
                     {
                         var result = oStreamReader.ReadToEnd();
-                        lstPersons= JsonConvert.DeserializeObject<IEnumerable<PersonsViewModel>>(result);                  }
+                        lstPersons = JsonConvert.DeserializeObject<IEnumerable<PersonsViewModel>>(result);
+                    }
                 }
             }
 
-                return View(lstPersons);
+            return View(lstPersons);
         }
 
         // GET: PopulationRegisterController/Details/5
@@ -47,22 +49,47 @@ namespace PopulationRegisterWeb.Controllers
         // GET: PopulationRegisterController/Create
         public ActionResult Create()
         {
-            return View();
+            PersonsViewModel personsViewModel = new PersonsViewModel();
+            return View(personsViewModel);
         }
 
         // POST: PopulationRegisterController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(PersonsViewModel obj)
         {
-            try
+
+            obj.AddedBy = 1;
+            obj.AddedByIp = "123";
+            obj.AddedOn = DateTime.Now;
+
+            HttpWebRequest oRequest = HttpWebRequest.Create("https://localhost/populationregister/api/persons/save") as HttpWebRequest;
+            oRequest.Method = "POST";
+            oRequest.ContentType = "application/json";
+            oRequest.KeepAlive = false;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            var jsonData = JsonConvert.SerializeObject(obj);
+            var oData = Encoding.UTF8.GetBytes(jsonData);
+            
+            using (Stream oReadRequest = await oRequest.GetRequestStreamAsync())
             {
-                return RedirectToAction(nameof(Index));
+                oReadRequest.Write(oData, 0, oData.Length);
             }
-            catch
+
+            using (HttpWebResponse oWebResponse =await oRequest.GetResponseAsync() as HttpWebResponse)
             {
-                return View();
+                if (oWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    return  RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View(obj);
+                }
             }
+
+
         }
 
         // GET: PopulationRegisterController/Edit/5

@@ -1,0 +1,137 @@
+﻿@model PopulationRegisterWeb.Models.PersonsViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="card">
+    <div class="card-header alert-danger">Add Person Register in Census Survey 2023</div>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="MiddleName" class="control-label"></label>
+                        <input asp-for="MiddleName" class="form-control" />
+                        <span asp-validation-for="MiddleName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Dob" class="control-label"></label>
+                        <input asp-for="Dob" class="form-control" />
+                        <span asp-validation-for="Dob" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="FatherName" class="control-label"></label>
+                        <input asp-for="FatherName" class="form-control" />
+                        <span asp-validation-for="FatherName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="MotherName" class="control-label"></label>
+                        <input asp-for="MotherName" class="form-control" />
+                        <span asp-validation-for="MotherName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="GenderId" class="control-label"></label>
+                        <select asp-for="GenderId" class="form-control" id="ddlGenders">
+                        </select>
+                        <span asp-validation-for="GenderId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CategoryId" class="control-label"></label>
+                        <select asp-for="CategoryId" class="form-control" id="ddlCategories"></select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-check-inline">
+                        <input type="submit" value="Register" class="btn btn-primary" />
+                        &nbsp;&nbsp;  <a asp-action="Index" class="btn btn-info">View All</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        var ddlGenders;
+        var ddlCategories;
+        var oData;
+        $(document).ready(function () {
+            ddlGenders = $("#ddlGenders");
+            ddlCategories = $("#ddlCategories");
+            fnGenders(ddlGenders);
+            fnCategories(ddlCategories);
+        });
+        function fnGenders(control) {
+            $.ajax({
+                url: "/Masters/Genders",
+                type: "GET",
+                dataType: "",
+                contentType: "application/json",
+                success: function (oServerData) {
+                    oData = oServerData;
+                    ddlGenders.empty();
+                    ddlGenders.append('<option value="">Select Gender</option>');
+                    $(oServerData).each(function (index, item) {
+                        ddlGenders.append('<option value=' + item.gender_ID + '>' + item.gender_Name + '</option>');
+                    });
+                },
+                error: function (xhr, status, err) {
+
+                }
+            });
+        }
+        function fnCategories(control) {
+            $.ajax({
+                url: "/Masters/Categories",
+                type: "GET",
+                dataType: "",
+                contentType: "application/json",
+                success: function (oServerData) {
+                    oData = oServerData;
+                    ddlCategories.empty();
+                    ddlCategories.append('<option  value="">Select Category</option>');
+                    $(oServerData).each(function (index, item) {
+                        ddlCategories.append('<option value=' + item.category_ID + '>' + item.category_Name + '</option>');
+                    });
+                },
+                error: function (xhr, status, err) {
+
+                }
+            });
+        }
+    </script>
+}
+

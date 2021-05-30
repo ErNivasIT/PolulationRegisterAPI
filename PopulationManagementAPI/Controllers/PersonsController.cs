@@ -48,6 +48,7 @@ namespace PopulationManagementAPI.Controllers
         }
 
         // POST api/<PersonsController>
+        [Route("Save")]
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] PersonViewModel person)

@@ -37,13 +37,6 @@ namespace PopulationManagementAPI.Controllers
             return lst;
         }
 
-        // GET api/<PersonsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<PersonsController>
 
         [HttpPost]
@@ -68,17 +61,6 @@ namespace PopulationManagementAPI.Controllers
             
             return Ok(result);
         }
-
-        // PUT api/<PersonsController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<PersonsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+ 
     }
 }

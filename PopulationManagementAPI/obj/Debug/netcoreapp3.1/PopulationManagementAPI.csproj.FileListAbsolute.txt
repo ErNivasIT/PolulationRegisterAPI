@@ -72,3 +72,11 @@ D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementA
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Debug\netcoreapp3.1\PopulationManagementAPI.dll
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Debug\netcoreapp3.1\PopulationManagementAPI.pdb
 D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Debug\netcoreapp3.1\PopulationManagementAPI.genruntimeconfig.cache
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\obj\Debug\netcoreapp3.1\PopulationManagementAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\ShreeNiwas\PolulationRegister\API\PolulationRegisterAPI\PopulationManagementAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

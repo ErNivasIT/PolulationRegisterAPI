@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PopulationManagementAPI.Models;
+using Swashbuckle.Swagger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,10 @@ namespace PopulationManagementAPI
 
             services.AddDbContext<MPKisaanContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("PopulationConnectionString")));
+
+            services.AddSwaggerGen(options=> {
+                
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +61,12 @@ namespace PopulationManagementAPI
 
             app.UseAuthorization();
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Population Register APIs");
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

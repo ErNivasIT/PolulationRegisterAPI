@@ -50,20 +50,22 @@ namespace PopulationManagementAPI.Controllers
         public async Task<IActionResult> Post([FromBody] PersonViewModel person)
         {
             //
-            var result = await personBusinessLayer.Save(new PersonModel()
+            KeyValuePair<string, string> result = new KeyValuePair<string, string>();
+            try
             {
-                FirstName = person.FirstName,
-                MiddleName = person.MiddleName,
-                LastName = person.LastName,
-                Dob = person.Dob,
-                CategoryId = person.CategoryId,
-                GenderId = person.GenderId,
-                MotherName = person.MotherName,
-                AddedBy = 1,
-                AddedByIp= Request.HttpContext.Connection.RemoteIpAddress.ToString(),
-                FatherName =person.FatherName,
-                AddedOn=DateTime.Now
-            }); ;
+                PersonModel objModel = mapper.Map<PersonModel>(person);
+                
+                objModel.AddedByIp=Request.HttpContext.Connection.RemoteIpAddress.ToString();
+                objModel.AddedOn= DateTime.Now;
+                objModel.AddedBy = 1;
+
+                result = await personBusinessLayer.Save(objModel); 
+            }
+            catch (Exception ex)
+            {
+                result = new KeyValuePair<string, string>("FAIL",ex.Message);
+            }
+            
             return Ok(result);
         }
 

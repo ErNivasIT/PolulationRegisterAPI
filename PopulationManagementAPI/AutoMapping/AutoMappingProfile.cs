@@ -12,7 +12,7 @@ namespace PopulationManagementAPI.AutoMapping
     {
         public AutoMappingProfile()
         {
-            CreateMap<PersonModel, PersonViewModel>();
+            CreateMap<PersonModel, PersonViewModel>().ReverseMap();
         }
         
     }
